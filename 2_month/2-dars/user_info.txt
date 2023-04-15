@@ -1,0 +1,28 @@
+ID:1
+Lastname: khabibillaev
+age: 21
+Address: bunyodkor
+ID:1
+Lastname: sdfa
+age: 21
+Address: dsfadf
+ID:2
+Lastname: fdsaf
+age: 545
+Address: fdsg
+ID:3
+Lastname: mbvmvb
+age: 23
+Address: fbcxvb
+ID:4
+Lastname: jhgkh,m
+age: 56
+Address: gfdhghmj
+ID:5
+Lastname: bnmcvhj
+age: 59
+Address: iuutr
+ID:6
+Lastname: fhd
+age: 26
+Address: hfhbn
