@@ -142,14 +142,14 @@
 #
 
 
-
-try:
-    list1 = [1, 2, 3]
-    list1[10]
-    print(name)
-    20/0
-except Exception as e:
-    print(e.__class__.__name__)
+#
+# try:
+#     list1 = [1, 2, 3]
+#     list1[10]
+#     print(name)
+#     20/0
+# except Exception as e:
+#     print(e.__class__.__name__)
 
 
 
