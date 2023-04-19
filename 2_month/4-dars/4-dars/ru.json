@@ -1,0 +1,14 @@
+{
+  "messages": {
+    "start": "Zdravstvuyte",
+    "end": "Poka"
+  },
+  "questions": {
+    "start": "Chego xotite?",
+    "end": "Tochno nechego ne xotite?"
+  },
+  "answers": {
+    "start": "Nechego",
+    "end": "Da"
+  }
+}

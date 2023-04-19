@@ -1,0 +1,14 @@
+{
+  "messages": {
+    "start": "Assalomu alaykum",
+    "end": "Hayr"
+  },
+  "questions": {
+    "start": "Nima xoxlaysiz?",
+    "end": "Aniq hech narsa xoxlamaysizmi?"
+  },
+  "answers": {
+    "start": "Hech narsa",
+    "end": "Ha"
+  }
+}
