@@ -1,0 +1,101 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS courses;
+
+CREATE TABLE courses(
+  course_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  couse_name TEXT UNIQUE
+);
+
+CREATE TABLE users(
+  user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  fisrt_name TEXT,
+  last_name TEXT,
+  course_id INTEGER REFERENCES courses(course_id)
+);
+
+
+INSERT INTO courses (couse_name)
+VALUES
+('Python'),
+('C++'),
+('Java');
+
+
+INSERT INTO users(fisrt_name, last_name, course_id)
+VALUES
+('Bobur', 'Boburov', 2),
+('Ahmad', 'Ahmadov', 3),
+('Sobir', 'Bakirov', 1);
+
+
+SELECT * FROM users JOIN courses ON users.course_id = courses.course_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS courses;
+
+CREATE TABLE courses(
+  course_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  couse_name TEXT UNIQUE
+);
+
+CREATE TABLE users(
+  user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  fisrt_name TEXT,
+  last_name TEXT,
+  course_id INTEGER REFERENCES courses(course_id)
+);
+
+
+INSERT INTO courses (couse_name)
+VALUES
+('Python'),
+('C++'),
+('Java');
+
+
+INSERT INTO users(fisrt_name, last_name, course_id)
+VALUES
+('Bobur', 'Boburov', 2),
+('Ahmad', 'Ahmadov', 3),
+('Sobir', 'Bakirov', 1);
+
+
+SELECT fisrt_name, last_name, couse_name 
+FROM users 
+JOIN courses ON users.course_id = courses.course_id;

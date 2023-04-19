@@ -1,0 +1,79 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE IF NOT EXISTS users(
+  user_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  first_name VARCHAR(20),
+  last_name VARCHAR(30)
+);
+
+
+INSERT INTO users(first_name, last_name)
+VALUES ('Bakir', 'Toxirov')
+RETURNING *;
+
+
+UPDATE users SET last_name='Sobirov' WHERE first_name='Toxir';
+
+
+DELETE FROM users WHERE first_name = 'Sobir'
+RETURNING *;
+
+
+SELECT * FROM users;
+
+--------------------------------------------------------------------------------
+
+SELECT * FROM customers;
+SELECT * FROM employees;
+
+
+SELECT country FROM employees
+EXCEPT
+SELECT country FROM customers;
+
+
+SELECT * FROM categories;
+SELECT * FROM products;
+
+
+SELECT product_name, category_name FROM products
+JOIN categories ON products.category_id = categories.category_id;
+
+
+SELECT product_name, category_name FROM products
+JOIN categories USING(category_id);
+
+
+SELECT count(category_id) FROM products;
+
+
+SELECT count(category_id) as total_quantity, category_name FROM products
+JOIN categories USING(category_id)
+GROUP BY category_name
+ORDER BY total_quantity DESC;
+
+
+SELECT avg(unit_price) FROM products;
+
+
+SELECT product_name, unit_price FROM products
+WHERE unit_price < (SELECT avg(unit_price) FROM products)
+ORDER BY unit_price DESC;
+
+
+
+select * from orders;
+
+
+SELECT company_name, contact_name, freight FROM orders
+JOIN customers USING(customer_id)
+WHERE freight BETWEEN 50 and 100
+ORDER BY freight
+
+
+SELECT * FROM customers;
+
+
+SELECT count(customer_id) AS total_coustomers, country FROM customers
+GROUP BY country
+HAVING count(customer_id) > 5
+ORDER BY total_coustomers;

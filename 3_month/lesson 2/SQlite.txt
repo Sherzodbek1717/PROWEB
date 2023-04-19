@@ -1,0 +1,110 @@
+SELECT * FROM customers;
+
+SELECT DISTINCT contact_name, country FROM customers
+ORDER BY country ASC, contact_name DESC;
+
+SELECT contact_name, country, region FROM customers
+WHERE region IS NULL;
+
+SELECT contact_name, country, region FROM customers
+WHERE region IS NOT NULL;
+
+
+SELECT contact_name, country FROM customers
+WHERE country = 'Mexico' OR country = 'UK';
+
+SELECT contact_name, country FROM customers
+WHERE country IN ('Mexico', 'UK', 'USA');
+
+SELECT * FROM products
+DROP TABLE IF EXISTS teachers_students;
+DROP TABLE IF EXISTS teachers;
+DROP TABLE IF EXISTS students;
+
+
+CREATE TABLE IF NOT EXISTS teachers(
+  teacher_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  full_name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS students(
+  student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  full_name TEXT
+);
+
+
+CREATE TABLE IF NOT EXISTS teachers_students(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  teacher_id INTEGER REFERENCES teachers(teacher_id),
+  student_id INTEGER REFERENCES students(student_id)
+);
+
+INSERT INTO teachers(full_name)
+VALUES
+('Sanjar Sanjarov'),
+('Rustam Rustamov');
+
+INSERT INTO students(full_name)
+VALUES
+('Toxir Toxiriv'),
+('Sobir Sobirov');
+
+
+INSERT INTO teachers_students(teacher_id, student_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(2, 2);
+
+
+SELECT teachers.full_name, students.full_name FROM teachers_students
+JOIN teachers ON teachers.teacher_id = teachers_students.teacher_id
+JOIN students ON students.student_id = teachers_students.student_id;
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------
+
+
+SELECT product_name, unit_price FROM products
+WHERE unit_price < 20
+ORDER BY unit_price DESC;
+
+
+SELECT product_name, unit_price FROM products
+WHERE unit_price <= 20 AND unit_price >= 10
+ORDER BY unit_price DESC;
+
+SELECT product_name, unit_price FROM products
+WHERE unit_price BETWEEN 10 AND 20
+ORDER BY unit_price DESC;
+
+
+SELECT product_name, unit_price FROM products
+ORDER BY unit_price DESC
+LIMIT 10;
+
+
+-- agregatlar
+
+-- count()
+
+SELECT count(DISTINCT country) FROM customers;
+SELECT count(*) FROM customers;
+
+-- max()
+SELECT max(unit_price) FROM products;
+
+-- min()
+SELECT min(unit_price) FROM products;
+
+-- avg()
+SELECT avg(unit_price) FROM products;
+
+-- sum()
+SELECT sum(unit_price) FROM products;

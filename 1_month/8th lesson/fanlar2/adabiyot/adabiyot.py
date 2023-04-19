@@ -1,0 +1,1 @@
+asar = 'Alisher Navoiy asarlari'
