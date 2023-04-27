@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf32edeb-8344-4a72-9798-8bb2df2b3cc9" name="Changes" comment="working with mistakes">
-      <change afterPath="$PROJECT_DIR$/2_month/3-dars/bad.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_month/3-dars/good.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_month/3-dars/registrations.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/PROWEB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_month/4-dars/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_month/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_month/3-dars/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2_month/3-dars/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/User/OneDrive/Desktop/TEST/2_month/2-dars",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/macbookm1/Desktop/PROWEB",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
